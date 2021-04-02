@@ -13,7 +13,7 @@ const AddProduct = () => {
           price:data.price,
           imageURL:imageURL
       }
-      const url=`http://localhost:4000/addProduct`;
+      const url=`https://car-dealar.herokuapp.com/addProduct`;
       fetch(url , {
           method:'POST',
           headers:{

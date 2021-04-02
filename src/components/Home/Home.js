@@ -8,7 +8,7 @@ const Home = () => {
   const [products,setProducts] =useState([]);
   const [card,setCard]=useState([]);
   useEffect(()=>{
-    fetch(`http://localhost:4000/products`)
+    fetch(`https://car-dealar.herokuapp.com/products`)
     .then(res=>res.json())
     .then(data=>setProducts(data))
   },[])

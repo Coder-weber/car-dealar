@@ -6,13 +6,13 @@ const Manage = () => {
   const [products, setProducts] = useState([]);
   console.log('product see ',products);
   useEffect(() => {
-    fetch(`http://localhost:4000/products`)
+    fetch(`https://car-dealar.herokuapp.com/products`)
       .then((res) => res.json())
       .then((data) =>setProducts(data));
   }, []);
   const handleDelete=(productId)=>{
     
-    fetch(`http://localhost:4000/deleteProduct/${productId}`,{
+    fetch(`https://car-dealar.herokuapp.com/deleteProduct/${productId}`,{
       method:'DELETE',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify()

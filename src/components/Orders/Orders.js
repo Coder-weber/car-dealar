@@ -8,7 +8,7 @@ const Orders = () => {
     // const [userLoggedIn, setUserLoggedIn] = useContext(userContext);
     console.log('bk info ',bookings);    
     useEffect(() => {
-      fetch("http://localhost:4000/bookings",{
+      fetch("https://car-dealar.herokuapp.com/bookings",{
         method: "GET",
         headers: {
           "Content-Type": "application/json",

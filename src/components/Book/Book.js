@@ -36,7 +36,7 @@ const Book = () => {
   const  [loginInUser,setLoginInUser] = useContext(UserContext);
   const handleBooking = () => {
     const newBooking = { ...loginInUser, ...selectedDate,...booking };
-    fetch("http://localhost:4000/addBooking", {
+    fetch("https://car-dealar.herokuapp.com/addBooking", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newBooking),
@@ -54,7 +54,7 @@ const Book = () => {
   const [booking, setBooking] =useState([]);
 
 useEffect(()=>{
-  fetch(`http://localhost:4000/bookin/${idCapture}`,{
+  fetch(`https://car-dealar.herokuapp.com/bookin/${idCapture}`,{
     method:'GET',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify()            

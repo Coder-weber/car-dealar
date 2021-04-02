@@ -7,7 +7,7 @@ const AddCar = ({ product }) => {
   const history=useHistory();
     const handleBuy=(id)=>{
       if(id== product._id){
-        fetch('http://localhost:4000/addBooking',{
+        fetch('https://car-dealar.herokuapp.com/addBooking',{
           method:'POST',
           headers:{'Content-Type':'application/json'},
           body:JSON.stringify(product)

@@ -7,7 +7,7 @@ const Car = ({product}) => {
     const history= useHistory()
     const handleBuy=(carId)=>{
         history.push(`/book/${carId}`);
-        fetch(`http://localhost:4000/bookin/${carId}`,{
+        fetch(`https://car-dealar.herokuapp.com/bookin/${carId}`,{
         // method:'GET',
         // headers:{'Content-Type':'application/json'},
         // body:JSON.stringify()            
